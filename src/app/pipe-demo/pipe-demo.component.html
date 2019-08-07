@@ -1,0 +1,56 @@
+<section>
+    <h3>pipe-demo works!</h3>
+
+    <div>
+        <h4>String Pipes</h4>
+        <p>Original :<strong>{{stringData}}</strong></p>
+        <p>{{stringData | uppercase}}</p>
+        <p>{{stringData | lowercase}}</p>
+        <p>{{stringData | titlecase}}</p>
+    </div>
+
+    <div>
+        <h4>Slice Pipes</h4>
+        <p>Original :<strong>{{stringData}}</strong></p>
+        <p>{{stringData | slice:5}}</p>
+        <p>{{stringData | slice:3:7}}</p>
+        <p>{{stringData | slice:2}}</p>
+    </div>
+
+    <div>
+            <h4>number Pipes</h4>
+            <p>Original :<strong>{{value}}</strong></p>
+            <p>{{value | number:'4.2-5'}}</p>
+            <p>{{value | number:'3.2-3'}}</p>
+            <p>{{value | number:'5.2-4'}}</p>
+    </div>
+
+    <div>
+            <h4>NumberPercent Pipes</h4>
+            <p>Original :<strong>{{value}}</strong></p>
+            <p>{{value | percent}}</p>
+    </div>
+    
+    <div>
+            <h4>currency Pipes</h4>
+            <p>Original :<strong>{{value}}</strong></p>
+            <p>{{value | currency: 'INR'}}</p>
+            <p>{{value | currency:'USD'}}</p>
+            <p>{{value | currency:'EUR'}}</p>
+    </div>
+
+    <div>
+            <h4>Date Pipes</h4>
+            <p>Original :<strong>{{datepipe}}</strong></p>
+            <p>{{datepipe |date:'short'}}</p>
+            <p>{{datepipe |date:'long'}}</p>
+            <p>{{datepipe |date:'dd-MM-yyyy'}}</p>
+            <p>{{datepipe |date:'hh:mm:ss'}}</p>
+    </div>
+
+    <div>
+            <h4>Custom pipes</h4>
+            <p>Original :<strong>{{datepipe}}</strong></p>
+            <p>{{"1998-08-15" |agepipe}}</p>
+    </div>
+</section>

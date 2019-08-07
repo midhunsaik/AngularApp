@@ -1,0 +1,39 @@
+<!--String Interpolation-->
+<h2>{{name}}</h2>
+
+<!--Event Binding-->
+<button (click)="greetUser()">Hit Me</button> <br/>
+
+<!--Property Binding-->
+<img [src]="imageUrl" alt="NA" /><br />
+
+<!--Attribute Directive and TWO WAY Binding-->
+<input [(ngModel)] ="companyName" />
+<h2>{{companyName}}</h2><br />
+
+<!--structural directive-->
+   <!--ngif-->
+   <h2 *ngIf="vissible"> this tag will be printed only if the value is true</h2>
+
+  <!--ngIf another format with else block-->
+  <h2 *ngIf="vissible ; else eBlock"></h2>
+  <ng-template #eBlock><h2>This is else block txt</h2></ng-template>
+  
+   <!--ngIf another format <h2 *ngIf="vissible; then tBlock; else eBlock"></h2> <ng-template #tBlock><h2>This is then block txt</h2></ng-template> <ng-template #eBlock><h2>This is else block txt</h2></ng-template>)-->
+  
+   <!--ngSwitch-->
+   <h2 [ngSwitch] = "color">
+    <h3 *ngSwitchCase="'red'">color you have picked is red</h3>
+    <h3 *ngSwitchCase="'pink'">color you have picked is pink</h3>
+    <h3 *ngSwitchCase="'blue'">color you have picked is blue</h3>
+    <h3 *ngSwitchCase="'green'">color you have picked is green</h3>
+    <h3 *ngSwitchDefault>Please pick any color</h3>
+   </h2>
+
+   <!--ngFor-->
+   <div *ngFor="let fru of fruits;index as j">
+    <h3> <pre>{{j}}:    {{fru}} </pre></h3></div>
+
+<!--PIPES-->
+   <!--Built In Pipes-->
+   <app-pipe-demo></app-pipe-demo>
